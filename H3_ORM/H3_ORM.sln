@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3_ORM_Data - Database-first", "H3_ORM_Data - Database-first\H3_ORM_Data - Database-first.csproj", "{2535B3FC-E1B0-48AB-909C-A9BADAF0F3BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3_ORM - Database-first", "H3_ORM - Database-first\H3_ORM - Database-first.csproj", "{7F4F3563-E59F-41DA-918F-BACE29C01217}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2535B3FC-E1B0-48AB-909C-A9BADAF0F3BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2535B3FC-E1B0-48AB-909C-A9BADAF0F3BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2535B3FC-E1B0-48AB-909C-A9BADAF0F3BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2535B3FC-E1B0-48AB-909C-A9BADAF0F3BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
