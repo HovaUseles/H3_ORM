@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace H3_ORM___Database_first;
+namespace H3_ORM___Database_first.Models;
 
 public partial class Author
 {

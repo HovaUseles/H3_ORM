@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace H3_ORM___Database_first.Repositories
+namespace H3_ORM___Code_first.Repositories
 {
     /// <summary>
     /// Responsible for manipulating data in the data source
@@ -44,6 +44,6 @@ namespace H3_ORM___Database_first.Repositories
         /// </summary>
         /// <param name="model">The Model to be deleted</param>
         /// <returns>The deleted model</returns>
-        public T Delete(object id);
+        public T Delete(T model);
     }
 }

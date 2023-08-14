@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3_ORM - Database-first", "H3_ORM - Database-first\H3_ORM - Database-first.csproj", "{7F4F3563-E59F-41DA-918F-BACE29C01217}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H3_ORM - Code-first", "H3_ORM - Code-first\H3_ORM - Code-first.csproj", "{D46669CD-7EE3-49AA-B0A1-27C81461F67B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F4F3563-E59F-41DA-918F-BACE29C01217}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D46669CD-7EE3-49AA-B0A1-27C81461F67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46669CD-7EE3-49AA-B0A1-27C81461F67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46669CD-7EE3-49AA-B0A1-27C81461F67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46669CD-7EE3-49AA-B0A1-27C81461F67B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
