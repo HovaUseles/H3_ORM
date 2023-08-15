@@ -74,3 +74,43 @@ VALUES
     (14, '2b', CONCAT('/', NEWID())),
     (23, '1d', CONCAT('/', NEWID())),
     (26, '1a', CONCAT('/', NEWID()));
+
+
+-- Insert additional made-up persons into the "Persons" table
+INSERT INTO Persons (Age, Name)
+VALUES
+    (28, 'Olivia Wilson'),
+    (37, 'Michael Thompson'),
+    (24, 'Sophia Davis'),
+    (50, 'Liam Anderson'),
+    (39, 'Emma Martinez'),
+    (26, 'Noah Brown'),
+    (43, 'Ava Miller'),
+    (32, 'William Rodriguez'),
+    (22, 'Isabella Harris'),
+    (41, 'James Hall'),
+    (30, 'Mia Martin'),
+    (48, 'Ethan White'),
+    (27, 'Charlotte Lewis'),
+    (35, 'Alexander Clark'),
+    (45, 'Amelia Adams');
+
+
+-- Insert Patron data for each person into the "Patrons" table
+INSERT INTO Patrons (PersonId, MembershipExpiryDate, PhoneNumber, Address)
+VALUES
+    (13, '2023-09-30', '5551234567', '123 Main St, Cityville'),
+    (14, '2023-07-15', '5559876543', '456 Elm St, Townsville'),
+    (15, '2022-12-20', '5553335555', '789 Oak St, Villageton'),
+    (16, '2023-02-05', '5554446666', '101 Pine St, Countryside'),
+    (17, '2023-06-30', '5555557777', '222 Maple Ave, Suburbia'),
+    (18, '2023-11-22', '5556668888', '333 Cedar Rd, Urbanville'),
+    (19, '2023-04-10', '5557779999', '444 Birch Ln, Metropolis'),
+    (20, '2022-10-15', '5558880000', '555 Willow Rd, Citytown'),
+    (21, '2023-03-25', '5559991111', '666 Spruce St, Townborough'),
+    (22, '2022-11-01', '5552223333', '777 Fir Ave, Villagetown'),
+    (23, '2023-07-12', '5553334444', '888 Pine Ln, Cityburg'),
+    (24, '2023-01-28', '5554445555', '999 Oak Rd, Villageland'),
+    (25, '2023-04-15', '5555556666', '111 Maple St, Suburbsville'),
+    (26, '2024-02-10', '5556667777', '222 Cedar Ave, Metropia'),
+    (27, '2022-10-05', '5557778888', '333 Birch Rd, Urbanburg');

@@ -18,4 +18,6 @@ public partial class Book
     public virtual Author? Author { get; set; }
 
     public virtual Ebook? Ebook { get; set; }
+
+    public virtual ICollection<Patron> Patrons { get; set; } = new List<Patron>();
 }

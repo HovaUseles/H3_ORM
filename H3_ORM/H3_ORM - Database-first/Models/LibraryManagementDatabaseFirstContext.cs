@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace H3_ORM___Database_first.Models;
 
-public partial class LibraryManagementDatabaseFirstContext : DbContext
+public partial class LibraryManagementDataBaseFirstContext : DbContext
 {
-    public LibraryManagementDatabaseFirstContext()
+    public LibraryManagementDataBaseFirstContext()
     {
     }
 
-    public LibraryManagementDatabaseFirstContext(DbContextOptions<LibraryManagementDatabaseFirstContext> options)
+    public LibraryManagementDataBaseFirstContext(DbContextOptions<LibraryManagementDataBaseFirstContext> options)
         : base(options)
     {
     }
@@ -25,10 +25,7 @@ public partial class LibraryManagementDatabaseFirstContext : DbContext
 
     public virtual DbSet<Person> Persons { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Library_Management_Database-first");
-
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Author>(entity =>
@@ -53,6 +50,21 @@ public partial class LibraryManagementDatabaseFirstContext : DbContext
             entity.HasOne(d => d.Author).WithMany(p => p.Books)
                 .HasForeignKey(d => d.AuthorId)
                 .HasConstraintName("FK_Books_Author");
+
+            entity.HasMany(d => d.Patrons).WithMany(p => p.Books)
+                .UsingEntity<Dictionary<string, object>>(
+                    "PatronsBook",
+                    r => r.HasOne<Patron>().WithMany()
+                        .HasForeignKey("PatronId")
+                        .HasConstraintName("FK_Patrons"),
+                    l => l.HasOne<Book>().WithMany()
+                        .HasForeignKey("BookId")
+                        .HasConstraintName("FK_Books"),
+                    j =>
+                    {
+                        j.HasKey("BookId", "PatronId").HasName("PK_PatronsBookS");
+                        j.ToTable("Patrons_Books");
+                    });
         });
 
         modelBuilder.Entity<Ebook>(entity =>
@@ -77,6 +89,7 @@ public partial class LibraryManagementDatabaseFirstContext : DbContext
             entity.Property(e => e.PersonId).ValueGeneratedNever();
             entity.Property(e => e.Address).HasMaxLength(100);
             entity.Property(e => e.MembershipExpiryDate).HasColumnType("date");
+            entity.Property(e => e.PhoneNumber).HasMaxLength(15);
 
             entity.HasOne(d => d.Person).WithOne(p => p.Patron)
                 .HasForeignKey<Patron>(d => d.PersonId)

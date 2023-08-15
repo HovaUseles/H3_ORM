@@ -1,0 +1,1 @@
+﻿Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Library_Management_DataBase-first' Microsoft.EntityFrameworkCore.SqlServer -ContextDir Models -OutputDir Models -Force
