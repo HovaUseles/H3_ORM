@@ -53,7 +53,6 @@ class Menu
         Console.WriteLine("\n\n== Book ============");
         book.Title = Input.ValidText("Book title:");
         book.Genre = Input.ValidText("Book genre:");
-        book.Title = Input.ValidText("Book title:");
 
         // Get user input, validate
         if (DateTime.TryParse(Input.ValidText("Book release date:"), out DateTime time))
