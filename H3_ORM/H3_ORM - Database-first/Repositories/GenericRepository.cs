@@ -12,21 +12,22 @@ namespace H3_ORM___Database_first.Repositories
     internal class GenericRepository<T> : IGenericRepository<T>
         where T : class
     {
-        private LibraryManagementDatabaseFirstContext _context;
-        public GenericRepository()
+        public LibraryManagementDataBaseFirstContext _context;
+        public GenericRepository(LibraryManagementDataBaseFirstContext context)
         {
-            _context = new LibraryManagementDatabaseFirstContext();
+            _context = context;
         }
 
-        public T Add(T model)
+        public virtual T Add(T model)
         {
             _context.Add(model);
             _context.SaveChanges();
             return model;
         }
 
-        public T Delete(object id)
+        public virtual T Delete(object id)
         {
+            // Trying to find the entity by using the generic find method in Entity Framework
             T model = _context.Find<T>(id);
             if (model == null)
             {
@@ -38,20 +39,26 @@ namespace H3_ORM___Database_first.Repositories
             return model;
         }
 
-        public T[] GetAll()
+        public virtual T[] GetAll()
         {
             return _context.Set<T>().ToArray();
         }
 
-        public T GetById(object id)
+        public virtual T GetById(object id)
         {
-            return _context.Find<T>(id);
+            // Trying to find the entity by using the generic find method in Entity Framework
+            T model = _context.Find<T>(id);
+            if (model == null)
+            {
+                throw new KeyNotFoundException($"Could not find model of type {typeof(T).Name} key: {id}");
+            }
+            return  model;
         }
 
-        public T Update(T modelChanges)
+        public virtual T Update(T modelChanges)
         {
-            _context.Attach(modelChanges);
-            _context.Entry(modelChanges).State = EntityState.Modified;
+            _context.Attach<T>(modelChanges);
+            _context.Entry<T>(modelChanges).State = EntityState.Modified;
             _context.SaveChanges();
             return modelChanges;
         }

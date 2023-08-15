@@ -9,9 +9,11 @@ public partial class Patron
 
     public DateTime? MembershipExpiryDate { get; set; }
 
-    public int PhoneNumber { get; set; }
+    public string PhoneNumber { get; set; } = null!;
 
     public string Address { get; set; } = null!;
 
     public virtual Person Person { get; set; } = null!;
+
+    public virtual ICollection<Book> Books { get; set; } = new List<Book>();
 }

@@ -16,8 +16,6 @@ using IHost host = builder.Build();
 using IServiceScope serviceScope = host.Services.CreateScope();
 IServiceProvider provider = serviceScope.ServiceProvider;
 
-
-
 // Getting injected services
 //var userRepository = provider.GetRequiredService<IGenericRepository>();
 
