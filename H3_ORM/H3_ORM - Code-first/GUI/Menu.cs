@@ -20,7 +20,7 @@ class Menu
             "Welcome to the library, \n" +
             "please choose one of the following options:\n" +
             "1. Add book\n" +
-            "2. Rent out book";
+            //"2. Rent out book";
 
         int userChoice = Input.ValidNumberSelection(menuText, 1, 2);
 

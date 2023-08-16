@@ -40,6 +40,7 @@ namespace H3_ORM___Database_first.Managers
                 Console.WriteLine("1. Display Books");
                 Console.WriteLine("2. Display Patrons");
                 Console.WriteLine("3. Rent a book to a patron");
+                Console.WriteLine("4. Quit");
                 Console.WriteLine();
                 int choice = Input.ValidNumberSelection("", 0, 3) - 1;
                 switch (choice)
