@@ -19,4 +19,5 @@ namespace H3_ORM___Code_first.Models
         public DbSet<Patron> Patrons { get; set; }
         public DbSet<Author> Authors { get; set; }
     }
+
 }

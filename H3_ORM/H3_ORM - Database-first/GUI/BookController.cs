@@ -135,7 +135,7 @@ namespace H3_ORM___Database_first.Managers
             Patron[] patrons = DisplayPatrons();
             Console.WriteLine();
 
-            int inputPatron = Input.ValidNumberSelection("Choose a book", 0, patrons.Length - 1, 100)-1;
+            int inputPatron = Input.ValidNumberSelection("Choose a Patron", 0, patrons.Length - 1, 100)-1;
             Patron chosenPatron = patrons[inputPatron];
 
             // Prompt for books choice
