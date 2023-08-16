@@ -1,6 +1,6 @@
-namespace H3_ORM___Code_first.Input;
+namespace H3_ORM___Code_first.GUI;
 
-class TextValidation
+class Input
 {
     public static int ValidNumberSelection(string text, int lowerLimit, int upperLimit, int attempts = 5)
     {

@@ -1,4 +1,4 @@
-namespace H3_ORM___Code_first.Input;
+namespace H3_ORM___Code_first.GUI;
 
 public class FileExists : Exception
 {
